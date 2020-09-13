@@ -12,6 +12,11 @@
 2. Java backend (Spring boot webflux)
 3. Async communication to backend through simple js
 
+### Algorithms
+
+1. Edit distance
+    - Generate all words at distance 1/2 through brute force
+
 ### Data
 
 1. It uses open source Wordset dictionary data which was bootstrapped from Princeton WordNet project data.
