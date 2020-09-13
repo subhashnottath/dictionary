@@ -19,4 +19,3 @@ public class TrafficRouter {
                 .and(RequestPredicates.accept(MediaType.APPLICATION_JSON)), searchHandler::lookup);
     }
 }
-

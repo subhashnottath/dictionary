@@ -22,7 +22,6 @@ import java.util.List;
 public class SearchHandler {
     private final DictionaryRepo dictionaryRepo;
     private final WordSuggester wordSuggester;
-//    private final ObjectMapper mapper;
 
     public Mono<ServerResponse> lookup(ServerRequest request) {
         Mono<InputData> reqMono = request.bodyToMono(InputData.class);
@@ -37,12 +36,6 @@ public class SearchHandler {
             }
             List<String> suggestions = wordSuggester.suggestions(word);
             response.setSuggestions(suggestions);
-//            String responseStr = "";
-//            try {
-//                responseStr = mapper.writeValueAsString(meanings);
-//            } catch (JsonProcessingException e) {
-//                log.error("Bad value from dictionary", e);
-//            }
             return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON)
                     .body(BodyInserters.fromValue(response));
         });
