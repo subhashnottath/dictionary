@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+    <style>
+        pre {
+            solid: #ccc;
+            padding: 5px;
+            margin: 5px;
+            white-space: pre;
+            font-family: monospace;
+            }
+        .string { color: green; }
+        .number { color: darkorange; }
+        .boolean { color: blue; }
+        .null { color: magenta; }
+        .key { color: red; }
+        .center {
+            width:50%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        .resTable {
+            width:100%
+        }
+
+    </style>
+</head>
+<body>
+    <table class="center">
+        <tr>
+            <td style="width:50%">
+                <input style="float: right" type="text" id="word" name="word" onkeypress="handleKeyPress(event)"/>
+            </td>
+            <td style="width:50%">
+                <input type="button" value="Lookup" onclick="lookup()"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="responseDiv">
+                    <pre id="response">
+                    </pre>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table id="responseTable" class="resTable">
+    </table>
+<script src="dictionary.js"></script>
+</body>
+</html>
