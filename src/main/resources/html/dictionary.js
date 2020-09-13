@@ -24,7 +24,7 @@ function lookup() {
         }
         document.getElementById("responseDiv").innerHTML = "";
         if (response.suggestions && response.suggestions.length > 0) {
-            var similar = "Similar words &nbsp; : &nbsp; " + format(response.suggestions);
+            var similar = "Did you mean &nbsp; : &nbsp; " + format(response.suggestions);
             document.getElementById("responseDiv").innerHTML = similar;
         }
     })();
