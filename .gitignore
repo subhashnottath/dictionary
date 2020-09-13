@@ -56,4 +56,4 @@ build/
 .vscode/
 
 ### Dictionary data files ###
-!**/src/main/resources/data/
+src/main/resources/data/
